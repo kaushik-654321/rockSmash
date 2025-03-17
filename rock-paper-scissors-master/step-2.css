@@ -1,0 +1,257 @@
+body {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 600;
+    font-style: normal;
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stp-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 8px;
+    width: 80%;
+}
+
+.first-section img {
+    width: 55%;
+}
+
+.stp-1 .right {
+    background-color: white;
+    height: auto;
+    width: 20%;
+    max-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.right .score-text {
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.right .score {
+    color: hsl(229, 25%, 31%);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.stp-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 80%;
+    margin-top: 4rem;
+    align-items: flex-end;
+
+}
+
+.icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.icon-bg img {
+    width: 50%;
+}
+
+.icon-bg-blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(237, 49%, 15%);
+    opacity: 0.4;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.stp-2-left {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.stp-2-right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.stp-2-left .icon-bg {
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+}
+
+
+.stp-2-left-rock .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+.stp-2-left-rock {
+    background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-rock-outside {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stp-2-left span {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.stp-2-right span {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.step-3 {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 80px;
+    
+}
+
+.step-3 .btn{
+    width: 100%;
+    padding: 5px;
+    color: white;
+    border: 2px solid hsl(217, 16%, 45%);
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+@media screen and (min-width:768px) {
+    .stp-1 {
+        width : 40%;
+    }
+    .first-section img {
+        width: 70%;
+    }
+    .right .score-text {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .right .score {
+        font-size: 2.8rem;
+        font-weight: 700;
+    }
+
+    .stp-2-left,  .stp-2-right {
+        flex-direction: column;
+        margin-bottom:0 ;
+        gap: 3rem
+    }
+ 
+    .stp-2-right span {
+        font-size: 1.2rem;
+    }
+    .stp-2-left span {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    .stp-2-right span {
+        margin-top: 0;
+    }
+
+
+    .stp-2-left-rock {
+        background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .left-rock-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stp-2-left-rock .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stp-2-left .icon-bg {
+        width: 160px;
+        height: 160px;
+    }
+
+    .icon-bg-blank {
+        width: 160px;
+        height: 160px;
+        margin-top: 0;
+        margin-bottom: 2.5rem;
+    }
+    .step-3{
+        right:0;
+        margin-right:1rem;
+       
+    }
+
+}

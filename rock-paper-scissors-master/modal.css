@@ -1,0 +1,53 @@
+body {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+.first-section h1 {
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+    padding-bottom: 2rem;
+}
+
+.second-section img {
+    height: auto;
+}
+
+.third-section {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        flex-direction: row;
+    }
+
+    .second-section {
+        position: absolute;
+        top: 9rem;
+        /* Adjust for proper placement */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .third-section {
+        margin: 0
+    }
+    .first-section h1 {
+        padding: 0;
+    }
+}
