@@ -1,4 +1,7 @@
-body{
+body {
+    font-family: "Barlow Semi Condensed", serif;
+    font-weight: 600;
+    font-style: normal;
     background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
@@ -37,8 +40,6 @@ body{
     padding-bottom: 10px;
 }
 
-
-
 .right .score-text {
     color: hsl(229, 64%, 46%);
     text-transform: uppercase;
@@ -52,35 +53,16 @@ body{
     font-weight: 700;
 }
 
-
 .stp-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20%;
+    gap: 10%;
+    width: 80%;
+    margin-top: 4rem;
+    align-items: flex-end;
 
 }
-
-.triangle-container {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    background: url('../../assets/images/bg-triangle.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 8rem;
-    width: 150px;
-    height: 150px;
-}
-
-.corner-text {
-    position: absolute;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-}
-
 
 .icon-bg {
     display: flex;
@@ -90,98 +72,83 @@ body{
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-top: 6px;
 }
 
 .icon-bg img {
     width: 50%;
 }
 
-.corner-text .icon-bg-outside {
+.icon-bg-blank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(237, 49%, 15%);
+    opacity: 0.4;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+
+.stp-2-left {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.stp-2-right {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.stp-2-left .icon-bg {
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+}
+
+
+.stp-2-left-rock .icon-bg-outside {
+    width: 90px;
+    height: 90px;
     background-color: hsla(217, 24%, 80%, 1);
     border-radius: 50%;
 }
 
-.paper-div {
-    bottom: 7px;
-    background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.paper-div-outside {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-45%, -45%);
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
-    background-size: cover;
-    cursor: pointer;
-
-}
-
-.scissors-div {
-    bottom: 7px;
-    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scissors-div-outside {
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(40%, -55%);
-    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.rock-div {
-    bottom: 7px;
+.stp-2-left-rock {
     background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-rock-outside {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.rock-div-outside {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, 80%);
-    background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.stp-2-left span {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.stp-2-right span {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: white;
 }
 
 .step-3 {
@@ -194,69 +161,97 @@ body{
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
-    max-width: 94px;
-
+    max-width: 80px;
+    
 }
 
-.step-3 .btn {
+.step-3 .btn{
     width: 100%;
-    padding: 7px 15px;
+    padding: 5px;
     color: white;
     border: 2px solid hsl(217, 16%, 45%);
-    background: transparent;
     font-weight: 500;
-    font-size: 11px;
+    font-size: 13px;
     cursor: pointer;
     border-radius: 7px;
 }
 
 @media screen and (min-width:768px) {
     .stp-1 {
-        width: 40%;
+        width : 40%;
     }
-
     .first-section img {
         width: 70%;
     }
-
     .right .score-text {
         font-size: 1rem;
         font-weight: 600;
     }
-
+    
     .right .score {
         font-size: 2.8rem;
         font-weight: 700;
     }
 
-    .icon-bg {
-        width: 110px;
-        height: 110px
+    .stp-2-left,  .stp-2-right {
+        flex-direction: column;
+        margin-bottom:0 ;
+        gap: 3rem
+    }
+ 
+    .stp-2-right span {
+        font-size: 1.2rem;
+    }
+    .stp-2-left span {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    .stp-2-right span {
+        margin-top: 0;
     }
 
-    .triangle-container {
-        width: 260px;
-        height: 260px;
-        margin-top: 11rem;
+
+    .stp-2-left-rock {
+        background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
-    .paper-div,
-    .scissors-div,
-    .rock-div {
-        width: 150px;
-        height: 150px
+    .left-rock-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .paper-div-outside,
-    .scissors-div-outside,
-    .rock-div-outside {
-        width: 150px;
-        height: 150px
+    .stp-2-left-rock .icon-bg-outside {
+        width: 160px;
+        height: 160px;
     }
 
-    .step-3 {
-        right: 0;
-        margin-right: 1rem;
-
+    .stp-2-left .icon-bg {
+        width: 160px;
+        height: 160px;
     }
+
+    .icon-bg-blank {
+        width: 160px;
+        height: 160px;
+        margin-top: 0;
+        margin-bottom: 2.5rem;
+    }
+    .step-3{
+        right:0;
+        margin-right:1rem;
+       
+    }
+
 }

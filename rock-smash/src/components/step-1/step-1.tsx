@@ -7,8 +7,19 @@ import rules from '../../assets/images/image-rules.svg';
 import close from '../../assets/images/icon-close.svg';
 import StyledModal from "../modal/modal";
 import "./step-1.css";
-const FirstStep: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+
+interface FirstStepProps {
+  setPlayerChoice: (choice: string) => void;
+}
+
+
+const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice}) => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+    const handleChoice = (type: string)=>{
+      setPlayerChoice(type);
+    }
+
+
   return (
     <>
       <div className="container">
@@ -26,7 +37,7 @@ const FirstStep: React.FC = () => {
         {/* Step 2: Game Options */}
         <div className="stp-2">
           <div className="triangle-container">
-            <div className="paper-div-outside">
+            <div className="paper-div-outside"  onClick={()=>handleChoice('paper')}>
               <div className="corner-text paper-div">
                 <div className="icon-bg-outside">
                   <div className="icon-bg">
@@ -35,7 +46,7 @@ const FirstStep: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="scissors-div-outside">
+            <div className="scissors-div-outside" onClick={()=>handleChoice('scissor')}>
               <div className="corner-text scissors-div">
                 <div className="icon-bg-outside">
                   <div className="icon-bg">
@@ -44,7 +55,7 @@ const FirstStep: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="rock-div-outside">
+            <div className="rock-div-outside"  onClick={()=>handleChoice('rock')}>
               <div className="corner-text rock-div">
                 <div className="icon-bg-outside">
                   <div className="icon-bg">
