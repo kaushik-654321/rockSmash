@@ -111,6 +111,34 @@ body {
 }
 
 
+.stp-2-left-paper .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+.stp-2-left-paper {
+    background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-paper-outside {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .stp-2-left-rock .icon-bg-outside {
     width: 90px;
     height: 90px;
@@ -138,6 +166,37 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.stp-2-left-scissor .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+.stp-2-left-scissor {
+    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-scissor-outside {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 .stp-2-left span {
     margin-top: 1rem;
@@ -210,7 +269,6 @@ body {
         margin-top: 0;
     }
 
-
     .stp-2-left-rock {
         background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
         width: 200px;
@@ -236,6 +294,63 @@ body {
         width: 160px;
         height: 160px;
     }
+
+
+    .stp-2-left-scissor {
+        background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .left-scissor-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stp-2-left-scissor .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .stp-2-left-paper {
+        background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .left-paper-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stp-2-left-paper .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    
 
     .stp-2-left .icon-bg {
         width: 160px;

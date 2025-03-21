@@ -146,7 +146,7 @@ body{
     position: absolute;
     right: 0;
     top: 0;
-    transform: translate(40%, -55%);
+    transform: translate(40%, -50%);
     background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
     width: 110px;
     height: 110px;

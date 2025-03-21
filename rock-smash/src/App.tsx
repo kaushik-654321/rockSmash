@@ -6,7 +6,6 @@ import SecondStep from './components/step-2/step-2';
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState<string>('');
-  console.log(playerChoice)
   return (
     <>
       {playerChoice ? <SecondStep playerChoice={playerChoice} /> : <FirstStep setPlayerChoice={setPlayerChoice} />}
