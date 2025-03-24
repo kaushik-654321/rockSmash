@@ -107,10 +107,10 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice, setScore, score, 
                             <h1>Rules</h1>
                         </div>
                         <div className="second-section">
-                            <img src={rules} alt="img-rule" />
+                        <img src={rules} alt="img-rule" width="300" height="300"/>
                         </div>
                         <div className="third-section" onClick={() => setIsModalOpen(false)}>
-                            <img src={close} alt="close" />
+                        <img src={close} alt="close" width="20" height="20" />
                         </div>
                     </div>
                 </StyledModal>

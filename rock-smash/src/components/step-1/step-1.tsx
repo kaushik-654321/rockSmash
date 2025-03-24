@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../../assets/images/logo.svg';
 import paper from '../../assets/images/icon-paper.svg';
 import rock from '../../assets/images/icon-rock.svg';
@@ -19,8 +19,19 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice, score}) => {
     const handleChoice = (type: string)=>{
       setPlayerChoice(type);
     }
+    const preloadImage = (url: string) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = url;
+      document.head.appendChild(link);
+    };
 
 
+
+    useEffect(() => {
+      preloadImage(rules); // Update with correct path
+    }, []);
   return (
     <>
       <div className="container">
@@ -81,10 +92,10 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice, score}) => {
               <h1>Rules</h1>
             </div>
             <div className="second-section">
-              <img src={rules} alt="img-rule" />
+              <img src={rules} alt="img-rule" width="300" height="300"/>
             </div>
             <div className="third-section" onClick={() => setIsModalOpen(false)}>
-              <img src={close} alt="close" />
+              <img src={close} alt="close" width="20" height="20" />
             </div>
           </div>
         </StyledModal>
