@@ -57,7 +57,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    /* gap: 10%; */
     width: 80%;
     margin-top: 4rem;
     align-items: flex-end;
@@ -110,6 +110,39 @@ body {
     margin-top: 5px;
 }
 
+.stp-2-right .icon-bg {
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+}
+
+.right-scissor-outside {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stp-2-right-scissor .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+.stp-2-right-scissor {
+    background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 .stp-2-left-paper .icon-bg-outside {
     width: 90px;
@@ -118,7 +151,8 @@ body {
     border-radius: 50%;
 }
 
-.stp-2-left-paper {
+.stp-2-left-paper,
+.stp-2-right-paper {
     background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     width: 120px;
     height: 120px;
@@ -129,7 +163,8 @@ body {
     margin-bottom: 10px;
 }
 
-.left-paper-outside {
+.left-paper-outside,
+.right-paper-outside {
     width: 120px;
     height: 120px;
     background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
@@ -146,7 +181,15 @@ body {
     border-radius: 50%;
 }
 
-.stp-2-left-rock {
+.stp-2-right-rock .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+.stp-2-left-rock,
+.stp-2-right-rock {
     background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     width: 120px;
     height: 120px;
@@ -157,7 +200,8 @@ body {
     margin-bottom: 10px;
 }
 
-.left-rock-outside {
+.left-rock-outside,
+.right-rock-outside {
     width: 120px;
     height: 120px;
     background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
@@ -174,7 +218,17 @@ body {
     border-radius: 50%;
 }
 
-.stp-2-left-scissor {
+.stp-2-right-scissor .icon-bg-outside {
+    width: 90px;
+    height: 90px;
+    background-color: hsla(217, 24%, 80%, 1);
+    border-radius: 50%;
+}
+
+
+
+.stp-2-left-scissor,
+.stp-2-right-scissor {
     background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
     width: 120px;
     height: 120px;
@@ -185,7 +239,8 @@ body {
     margin-bottom: 10px;
 }
 
-.left-scissor-outside {
+.left-scissor-outside,
+.right-scissor-outside {
     width: 120px;
     height: 120px;
     background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
@@ -210,7 +265,7 @@ body {
     color: white;
 }
 
-.step-3 {
+.step-4 {
     position: absolute;
     bottom: 0;
     display: flex;
@@ -221,10 +276,10 @@ body {
     margin-bottom: 1rem;
     width: 100%;
     max-width: 80px;
-    
+
 }
 
-.step-3 .btn{
+.step-4 .btn {
     width: 100%;
     padding: 5px;
     color: white;
@@ -235,41 +290,119 @@ body {
     border-radius: 7px;
 }
 
+.player-outside,
+.computer-outside {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        0 0 0 20px rgba(99, 108, 126, 0.05),
+        /* First orbit */
+        0 0 0 45px rgba(99, 108, 126, 0.05),
+        /* Second orbit */
+        0 0 0 70px rgba(99, 108, 126, 0.05);
+}
+
+.step-3 {
+    position: relative;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step-3 span {
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    max-width: 200px;
+}
+
+.step-3>.btn {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 0.6rem;
+    padding: 10px 0px;
+    background-color: white;
+    color: hsl(229, 4%, 35%);
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+
+
 @media screen and (min-width:768px) {
-    .stp-1 {
-        width : 40%;
+
+    .player-outside,
+    .computer-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow:
+            0 0 0 50px rgba(99, 108, 126, 0.05),
+            /* First orbit */
+            0 0 0 100px rgba(99, 108, 126, 0.05),
+            /* Second orbit */
+            0 0 0 150px rgba(99, 108, 126, 0.05);
     }
+
+    .stp-1 {
+        width: 40%;
+    }
+   
+
+   
+
     .first-section img {
         width: 70%;
     }
+
     .right .score-text {
         font-size: 1rem;
         font-weight: 600;
     }
-    
+
     .right .score {
         font-size: 2.8rem;
         font-weight: 700;
     }
 
-    .stp-2-left,  .stp-2-right {
+    .stp-2-left,
+    .stp-2-right {
         flex-direction: column;
-        margin-bottom:0 ;
+        margin-bottom: 0;
         gap: 3rem
     }
- 
+
     .stp-2-right span {
         font-size: 1.2rem;
     }
+
     .stp-2-left span {
         font-size: 1.2rem;
         margin-top: 0;
     }
+
     .stp-2-right span {
         margin-top: 0;
     }
 
-    .stp-2-left-rock {
+    .stp-2-left-rock,
+    .stp-2-right-rock {
         background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
         width: 200px;
         height: 200px;
@@ -280,7 +413,8 @@ body {
         margin-bottom: 10px;
     }
 
-    .left-rock-outside {
+    .left-rock-outside,
+    .right-rock-outside {
         width: 200px;
         height: 200px;
         background: linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 75%, 24%));
@@ -295,8 +429,14 @@ body {
         height: 160px;
     }
 
+    .stp-2-right-rock .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
 
-    .stp-2-left-scissor {
+
+    .stp-2-left-scissor,
+    stp-2-right-scissor {
         background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
         width: 200px;
         height: 200px;
@@ -307,7 +447,8 @@ body {
         margin-bottom: 10px;
     }
 
-    .left-scissor-outside {
+    .left-scissor-outside,
+    .right-scissor-outside {
         width: 200px;
         height: 200px;
         background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
@@ -322,8 +463,14 @@ body {
         height: 160px;
     }
 
+    .stp-2-right-scissor .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
 
-    .stp-2-left-paper {
+
+    .stp-2-left-paper,
+    .stp-2-right-paper {
         background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         width: 200px;
         height: 200px;
@@ -334,7 +481,8 @@ body {
         margin-bottom: 10px;
     }
 
-    .left-paper-outside {
+    .left-paper-outside,
+    .right-paper-outside {
         width: 200px;
         height: 200px;
         background: linear-gradient(to right, hsl(230, 89%, 62%), hsl(230, 50%, 26%));
@@ -349,8 +497,10 @@ body {
         height: 160px;
     }
 
-
-    
+    .stp-2-right-paper .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
 
     .stp-2-left .icon-bg {
         width: 160px;
@@ -363,10 +513,52 @@ body {
         margin-top: 0;
         margin-bottom: 2.5rem;
     }
-    .step-3{
-        right:0;
-        margin-right:1rem;
-       
+
+    .step-4 {
+        right: 0;
+        margin-right: 1rem;
+    }
+
+    .stp-2-right-scissor {
+        background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .right-scissor-outside {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 50%, 26%));
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stp-2-right-scissor .icon-bg-outside {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stp-2-right .icon-bg {
+        width: 160px;
+        height: 160px;
+    }
+
+    .step-3 {
+        position: absolute;
+        margin: 0;
+        top: 50%
+    }
+
+    .step-3 span {
+        font-size: 2.5rem;
+
     }
 
 }

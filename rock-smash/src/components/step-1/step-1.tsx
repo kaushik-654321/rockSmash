@@ -68,7 +68,7 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice}) => {
         </div>
 
         {/* Step 3: Rules Button */}
-        <div className="step-3">
+        <div className="stp-3">
           <button className="btn" onClick={() => setIsModalOpen(true)}>RULES</button>
         </div>
       </div>
