@@ -74,7 +74,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
 
                 {result && <div className="step-3">
                     <span>{result}</span>
-                    <div className="btn">
+                    <div className={`btn ${winner === 'computer' ? 'text-red' : 'text-gray'}`}>
                         PLAY AGAIN
                     </div>
                 </div>}

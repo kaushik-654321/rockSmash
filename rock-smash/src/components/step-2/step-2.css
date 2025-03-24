@@ -330,7 +330,6 @@ body {
     margin-top: 0.6rem;
     padding: 10px 0px;
     background-color: white;
-    color: hsl(229, 4%, 35%);
     text-align: center;
     border-radius: 7px;
     font-weight: 700;
@@ -340,8 +339,18 @@ body {
 }
 
 
+.text-red {
+    color: red;
+}
+
+.text-gray {
+    color: hsl(229, 4%, 35%);
+}
 
 @media screen and (min-width:768px) {
+    .text-red {
+        color: red;
+    }
 
     .player-outside,
     .computer-outside {
@@ -363,9 +372,7 @@ body {
     .stp-1 {
         width: 40%;
     }
-   
 
-   
 
     .first-section img {
         width: 70%;
