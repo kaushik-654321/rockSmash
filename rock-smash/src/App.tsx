@@ -6,14 +6,23 @@ import SecondStep from './components/step-2/step-2';
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState<string>('');
-  if (playerChoice){
-    return (<SecondStep playerChoice={playerChoice} />);
+  const [score, setScore] = useState<number>(0);
+
+  const backtoMain = () => {
+    setPlayerChoice('');
   }
-  else{
-    return (<FirstStep setPlayerChoice={setPlayerChoice} />);
-  }
-  
-   
+
+  return (
+    <div className={playerChoice ? 'second-step-wrapper' : 'first-step-wrapper'}>
+      {playerChoice ? (
+        <SecondStep {...{ playerChoice, setScore, score, backtoMain }} />
+      ) : (
+        <FirstStep {...{ setPlayerChoice, score }} />
+      )}
+    </div>
+  );
+
+
 }
 
 export default App

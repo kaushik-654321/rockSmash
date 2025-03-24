@@ -6,14 +6,15 @@ import scissor from '../../assets/images/icon-scissors.svg';
 import rules from '../../assets/images/image-rules.svg';
 import close from '../../assets/images/icon-close.svg';
 import StyledModal from "../modal/modal";
-import "./step-1.css";
+import "./step-1.scss";
 
 interface FirstStepProps {
   setPlayerChoice: (choice: string) => void;
+  score: number
 }
 
 
-const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice}) => {
+const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice, score}) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
     const handleChoice = (type: string)=>{
       setPlayerChoice(type);
@@ -30,7 +31,7 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice}) => {
           </div>
           <div className="right">
             <span className="score-text">score</span>
-            <span className="score">12</span>
+            <span className="score">{score}</span>
           </div>
         </div>
 
@@ -68,12 +69,12 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice}) => {
         </div>
 
         {/* Step 3: Rules Button */}
-        <div className="stp-3">
+        <div className="step-3">
           <button className="btn" onClick={() => setIsModalOpen(true)}>RULES</button>
         </div>
       </div>
       {/* Modal as Overlay */}
-      {isModalOpen && (
+      {isModalOpen && score < 1 && (
         <StyledModal isOpen={isModalOpen}>
           <div className="modal">
             <div className="first-section">

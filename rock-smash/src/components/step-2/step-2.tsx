@@ -3,16 +3,24 @@ import logo from '../../assets/images/logo.svg';
 import paper from '../../assets/images/icon-paper.svg';
 import rock from '../../assets/images/icon-rock.svg';
 import scissor from '../../assets/images/icon-scissors.svg';
-import './step-2.css';
+import rules from '../../assets/images/image-rules.svg';
+import close from '../../assets/images/icon-close.svg';
+import './step-2.scss';
 import HousePick from "../step-3/step-3";
+import StyledModal from "../modal/modal";
 
 interface SecondStepProps {
     playerChoice: string;
+    setScore: (score: number) => void;
+    score: number;
+    backtoMain: () => void;
 }
 
-const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
+const SecondStep: React.FC<SecondStepProps> = ({ playerChoice, setScore, score, backtoMain }) => {
     const [result, setResult] = useState<string>('');
     const [winner, setWinner] = useState<string>('');
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
     const obj = {
         'rock': rock,
         'paper': paper,
@@ -23,6 +31,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
 
     const determineWinner = (playerChoice: string, computerChoice: string) => {
         if (playerChoice === computerChoice) {
+
             setResult("It's a Draw");
         }
         else if (
@@ -32,10 +41,15 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
         ) {
 
             setResult("YOU WIN");
+            setScore(score += 1);
             setWinner("player");
         } else {
 
             setResult("YOU LOSE");
+            if (score > 0) {
+                setScore(score -= 1);
+            }
+
             setWinner("computer");
         }
     }
@@ -48,7 +62,7 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
                     </div>
                     <div className="right">
                         <span className="score-text">score</span>
-                        <span className="score">12</span>
+                        <span className="score">{score}</span>
                     </div>
                 </div>
                 <div className="stp-2">
@@ -74,18 +88,33 @@ const SecondStep: React.FC<SecondStepProps> = ({ playerChoice }) => {
 
                 {result && <div className="step-3">
                     <span>{result}</span>
-                    <div className={`btn ${winner === 'computer' ? 'text-red' : 'text-gray'}`}>
+                    <div className={`btn ${winner === 'computer' ? 'text-red' : 'text-gray'}`} onClick={backtoMain}>
                         PLAY AGAIN
                     </div>
                 </div>}
 
 
                 <div className="step-4">
-                    <div className="btn">
+                    <div className="btn" onClick={() => setIsModalOpen(true)}>
                         RULES
                     </div>
                 </div>
             </div>
+            {isModalOpen && (
+                <StyledModal isOpen={isModalOpen}>
+                    <div className="modal">
+                        <div className="first-section">
+                            <h1>Rules</h1>
+                        </div>
+                        <div className="second-section">
+                            <img src={rules} alt="img-rule" />
+                        </div>
+                        <div className="third-section" onClick={() => setIsModalOpen(false)}>
+                            <img src={close} alt="close" />
+                        </div>
+                    </div>
+                </StyledModal>
+            )}
         </>
     )
 }
