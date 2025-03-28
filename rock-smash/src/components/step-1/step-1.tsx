@@ -92,7 +92,7 @@ const FirstStep: React.FC<FirstStepProps> = ({setPlayerChoice, score}) => {
               <h1>Rules</h1>
             </div>
             <div className="second-section">
-              <img src={rules} alt="img-rule" width="300" height="300"/>
+              <img src={rules} alt="img-rule" width="240" height="240"/>
             </div>
             <div className="third-section" onClick={() => setIsModalOpen(false)}>
               <img src={close} alt="close" width="20" height="20" />
